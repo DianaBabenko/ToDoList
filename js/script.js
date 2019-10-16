@@ -22,11 +22,11 @@ function addTask() {
     activeIndex = null;
     document.getElementById('addButton').innerText = 'Create';
 
-    generateTask(tasks);
-    updateStorage();
+    generateList(tasks);
+    updateList();
 }
 
-function generateTask (){
+function generateList (){
     let list = document.createElement('ul');
     list.className = "list";
 
@@ -58,7 +58,7 @@ function generateTask (){
     todoListDiv.append(list);
 }
 
-function updateStorage () {
+function updateList () {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
@@ -76,7 +76,7 @@ function removeTask (index){
         }
     }
     //console.log(tasks);
-    generateTask(tasks);
-    updateStorage();
+    generateList(tasks);
+    updateList();
 }
-generateTask();
+generateList();
