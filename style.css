@@ -10,6 +10,10 @@ h1 {
     list-style: none;
 }
 
+.task {
+    cursor: pointer;
+}
+
 .closeBtn {
     display: none;
     background: red;

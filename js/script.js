@@ -33,6 +33,7 @@ function generateList (){
     for (let todoIndex in tasks) {
         let todoEl = document.createElement('li');
         let nameOfTask = document.createElement('span');
+        nameOfTask.className = "task";
 
         nameOfTask.innerText = tasks[todoIndex];
         todoEl.append(nameOfTask);
